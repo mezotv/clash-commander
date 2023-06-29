@@ -23,7 +23,7 @@ const ServerSlider: FC<ServerSliderProps> = ({ servers }) => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 3000); // Adjust the interval duration for smoother sliding
+    }, 1000); // Adjust the interval duration for smoother sliding
 
     return () => {
       clearInterval(interval);
