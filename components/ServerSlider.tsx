@@ -42,7 +42,7 @@ const ServerSlider: FC<ServerSliderProps> = ({ servers }) => {
     arrows: false,
     draggable: false,
     autoplay: true,
-    autoplaySpeed: 3000, // Adjust the autoplay interval for smoother sliding
+    autoplaySpeed: 1000, // Adjust the autoplay interval for smoother sliding
     responsive: [
       {
         breakpoint: 768,
