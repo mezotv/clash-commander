@@ -5,6 +5,8 @@ import { m, LazyMotion, domAnimation } from "framer-motion";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import Link from "next/link";
 import Features from "@/components/Features";
+import InviteSection from "@/components/InviteSection";
+import Footer from "@/components/Footer";
 export default function Home() {
   const servers = [
     {
@@ -46,7 +48,7 @@ export default function Home() {
     // Add more server objects as needed
   ];
   return (
-    <div id="hero" className="w-full relative overflow-hidden">
+    <div id="hero" className="w-full relative overflow-hidden ">
       <Navbar />
       <LazyMotion features={domAnimation} strict>
         <m.div
@@ -65,7 +67,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  A Discord bot for managing your Clash of Clans
+                   Discord bot for managing your Clash of Clans
                   clan.
                 </m.h1>
                 <m.p
@@ -83,15 +85,17 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
+                  <Link href={"#features"}>
                   <button className="bg-[#cda2c1] hover:bg-[#a96095] text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0">
                     Get Started
                   </button>
+                  </Link>
+                    <Link href={"https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560"}>
                   <button className="bg-white hover:bg-zinc-600 text-black font-bold py-4 px-8 rounded">
                     <AiOutlinePlusSquare className="inline-block mr-2" />{" "}
-                    <Link href={"https://discord.com/invite/replace"}>
                       Invite Bot
-                    </Link>
                   </button>
+                    </Link>
                 </m.div>
               </div>
               <div className="w-full lg:w-1/2 flex justify-center  mb-[2rem] lg:mb-[8rem]">
@@ -137,6 +141,8 @@ export default function Home() {
       <div className="">
       <Features/>
       </div>
+      <InviteSection/>
+      <Footer/>
     </div>
   );
 }

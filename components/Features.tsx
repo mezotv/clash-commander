@@ -62,7 +62,18 @@ const Features = () => {
           <div className="flex flex-col lg:flex-row items-center justify-center mt-16">
             <div className="w-full lg:w-1/2 order-2">
               <div className="text-left">
-                <m.h3
+              <m.img
+                src="/image_3.png"
+                className="w-full max-w-md mx-auto mb-8 lg:mb-0 rounded-lg"
+                alt="Feature Image 3"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+              </div>
+            </div>
+            <div className="w-full  lg:w-1/2 order-1">
+            <m.h3
                   className="text-2xl font-bold text-white mb-4"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -78,29 +89,20 @@ const Features = () => {
                 >
                   Clash Commander seamlessly integrates with Discord, providing you and your clan members with a smooth and efficient experience. Connect your clan server and unlock the full potential of clan management and coordination.
                 </m.p>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2 order-1">
-              <m.img
-                src="/image_3.png"
-                className="w-full max-w-md mx-auto mb-8 lg:mb-0 rounded-lg"
-                alt="Feature Image 3"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              />
             </div>
           </div>
           <div className="flex justify-center mt-16">
+          <Link href={'https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560'}>
             <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full">
               <m.span
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <Link href={'https://discord.com/invite'}> Get Started </Link>
+                Get Started 
               </m.span>
             </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,11 +19,13 @@ const ServerSlider: FC<ServerSliderProps> = ({ servers }) => {
   const sliderRef = useRef<Slider>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const animateSlider = () => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 1000); // Adjust the interval duration for smoother sliding
+    };
+
+    const interval = setInterval(animateSlider, 2000); // Adjust the interval duration for smoother sliding
 
     return () => {
       clearInterval(interval);
@@ -33,7 +35,7 @@ const ServerSlider: FC<ServerSliderProps> = ({ servers }) => {
   const settings: Settings = {
     dots: false,
     infinite: true,
-    speed: 1000, // Adjust slide transition speed for smoother motion
+    speed: 500, // Adjust slide transition speed for smoother motion
     slidesToShow: 3, // Show 3 cards on desktop
     slidesToScroll: 1,
     rtl: true,
@@ -41,8 +43,7 @@ const ServerSlider: FC<ServerSliderProps> = ({ servers }) => {
     lazyLoad: "ondemand" as const, // Provide the correct type for lazyLoad
     arrows: false,
     draggable: false,
-    autoplay: true,
-    autoplaySpeed: 1000, // Adjust the autoplay interval for smoother sliding
+    autoplay: false, // Disable autoplay
     responsive: [
       {
         breakpoint: 768,

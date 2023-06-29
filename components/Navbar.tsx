@@ -44,12 +44,12 @@ const Navbar: React.FC = () => {
             </div>
             <ul className="hidden lg:flex lg:items-center space-x-6">
             <motion.li
-              className="mr-4"
+              className=""
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}>
                 <a
-                  href="#hero"
+                  href="/"
                   className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Home
