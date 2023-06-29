@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import Marquee, { randomIntFromInterval } from "react-marquee-slider";
+import Marquee from "react-marquee";
+
 
 interface Server {
   id: string;
