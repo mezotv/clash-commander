@@ -18,7 +18,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: black;
+  background-color: #040104;
   position: relative;
   overflow-x: hidden;
   -webkit-overflow-x: hidden;
@@ -32,5 +32,5 @@ body {
 
 
 .secondary{ 
-  background: #5000ca;
+  background: #f4e1;
 }

@@ -2,6 +2,21 @@ import { m, LazyMotion, domAnimation } from "framer-motion";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
 export default function Home() {
+  const featuresData = [
+    {
+      imageSrc: "/image1.jpg",
+      text: "Feature 1",
+    },
+    {
+      imageSrc: "/image2.jpg",
+      text: "Feature 2",
+    },
+    {
+      imageSrc: "/image3.jpg",
+      text: "Feature 3",
+    },
+  ];
+
   return (
     <div id="hero" className="w-full relative overflow-hidden">
       <LazyMotion features={domAnimation} strict>
@@ -21,8 +36,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  The ultimate Discord bot for managing your Clash of Clans
-                  clan.
+                  The ultimate Discord bot for managing your Clash of Clans clan.
                 </m.h1>
                 <m.p
                   className="text-lg lg:text-2xl text-white mt-4"
@@ -30,21 +44,19 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Clash Commander is packed with powerful features to streamline
-                  your Clash of Clans clan management.
+                  Clash Commander is packed with powerful features to streamline your Clash of Clans clan management.
                 </m.p>
                 <m.div
-                  className="flex flex-row mt-6"
+                  className="lg:flex lg:flex-row mt-6 flex flex-col"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-8 rounded mr-8">
+                  <button className="bg-[#cda2c1] hover:bg-[#a96095] text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0">
                     Get Started
                   </button>
-                  <button className="bg-violet-500 hover:bg-violet-600 text-white font-bold py-4 px-8 rounded">
-                    <AiOutlinePlusSquare className="inline-block mr-2" /> Get
-                    Started
+                  <button className="bg-white hover:bg-zinc-600 text-black font-bold py-4 px-8 rounded">
+                    <AiOutlinePlusSquare className="inline-block mr-2" /> Get Started
                   </button>
                 </m.div>
               </div>
@@ -63,10 +75,10 @@ export default function Home() {
               <svg
                 className="wave"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1440 320"
+                viewBox="0 0 1440 260"
               >
                 <path
-                  fill="#5000ca"
+                  fill="#f4e1"
                   fillOpacity="1"
                   d="M0,192L60,186.7C120,181,240,171,360,149.3C480,128,600,96,720,90.7C840,85,960,107,1080,117.3C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
                 ></path>
@@ -77,7 +89,75 @@ export default function Home() {
       </LazyMotion>
       <div className="secondary">
         <div className="container mx-auto px-4">
-          he
+          <LazyMotion features={domAnimation} strict>
+            {featuresData.map((feature, index) => (
+              <m.div
+                key={index}
+                className={`feature ${index % 2 === 0 ? "even" : "odd"}`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="flex flex-col lg:flex-row items-center">
+                  {index % 2 === 0 ? (
+                    <>
+                      <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
+                        <m.img
+                          src={feature.imageSrc}
+                          className="w-2/3 max-w-[450px] h-auto rounded-full"
+                          alt={feature.text}
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.8 }}
+                        />
+                      </div>
+                      <div className="w-full lg:w-1/2 lg:text-left">
+                        <h3 className="text-white text-lg font-medium mb-2">
+                          {feature.text}
+                        </h3>
+                        <p className="text-gray-400 mb-4">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <a
+                          href="#"
+                          className="text-purple-500 hover:text-purple-600 font-medium"
+                        >
+                          Learn More
+                        </a>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-full lg:w-1/2 lg:text-left">
+                        <h3 className="text-white text-lg font-medium mb-2">
+                          {feature.text}
+                        </h3>
+                        <p className="text-gray-400 mb-4">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <a
+                          href="#"
+                          className="text-purple-500 hover:text-purple-600 font-medium"
+                        >
+                          Learn More
+                        </a>
+                      </div>
+                      <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
+                        <m.img
+                          src={feature.imageSrc}
+                          className="w-2/3 max-w-[450px] h-auto rounded-full"
+                          alt={feature.text}
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.8 }}
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
+              </m.div>
+            ))}
+          </LazyMotion>
         </div>
       </div>
     </div>
