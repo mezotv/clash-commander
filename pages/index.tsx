@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
@@ -18,7 +19,9 @@ export default function Home() {
   ];
 
   return (
+    
     <div id="hero" className="w-full relative overflow-hidden">
+       <Navbar />
       <LazyMotion features={domAnimation} strict>
         <m.div
           id="hero-content"
@@ -87,7 +90,7 @@ export default function Home() {
           </div>
         </m.div>
       </LazyMotion>
-      <div className="secondary">
+      <div id="features" className="secondary">
         <div className="container mx-auto px-4">
           <LazyMotion features={domAnimation} strict>
             {featuresData.map((feature, index) => (
