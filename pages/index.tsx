@@ -1,118 +1,109 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import { AiOutlinePlusSquare } from "react-icons/ai";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div id="hero" className="w-full relative overflow-hidden">
+      <LazyMotion features={domAnimation} strict>
+        <m.div
+          id="hero-content"
+          className="relative w-full flex flex-col justify-center items-center h-screen min-h-[800px] text-center"
+        >
+          <div className="container mx-auto px-4">
+            <div className="flex items-center">
+              <div className="w-2/5">
+                <h1 className="text-4xl lg:text-6xl text-left text-white">
+                  The ultimate Discord bot for managing your Clash of Clans
+                  clan.
+                </h1>
+                <p className="text-lg lg:text-2xl text-left text-white mt-4">
+                  Clash Commander is packed with powerful features to streamline
+                  your Clash of Clans clan management.
+                </p>
+                <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-8 rounded mt-8">
+                  Get Started
+                </button>
+                <button className="bg-violet-500 hover:bg-violet-600 text-white font-bold py-4 px-8 rounded mt-8">
+                  <AiOutlinePlusSquare className="inline-block mr-2" /> Get
+                  Started
+                </button>
+              </div>
+              <div className="w-3/5 flex justify-end">
+                <img
+                  src="/clash_commander.png"
+                  className="w-2/3 max-w-[500px] h-auto rounded-full animate-bounce"
+                  alt="Clash Commander Avatar"
+                />
+              </div>
+            </div>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute bottom-0 left-0 w-full"
+            viewBox="0 0 1440 320"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <path
+              fill="#5000ca"
+              fillOpacity="1"
+              d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,208C672,203,768,149,864,154.7C960,160,1056,224,1152,208C1248,192,1344,96,1392,48L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+          <div
+            className="absolute bottom-0 w-full bg-[#5000ca]"
+            style={{
+              height: "50px",
+            }}
+          ></div>
+        </m.div>
+      </LazyMotion>
+      <div className="secondary">
+        <div className="container mx-auto px-4 ">
+          <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8">
+            Template Content
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white text-lg font-medium mb-2">Feature 1</h3>
+              <p className="text-gray-400 mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                feugiat mauris sit amet enim placerat, ac volutpat mi lacinia.
+              </p>
+              <a
+                href="#"
+                className="text-purple-500 hover:text-purple-600 font-medium"
+              >
+                Learn More
+              </a>
+            </div>
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white text-lg font-medium mb-2">Feature 2</h3>
+              <p className="text-gray-400 mb-2">
+                Sed posuere, ipsum non gravida facilisis, mi nisi ultricies
+                lorem, in semper justo nisl non nunc.
+              </p>
+              <a
+                href="#"
+                className="text-purple-500 hover:text-purple-600 font-medium"
+              >
+                Learn More
+              </a>
+            </div>
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white text-lg font-medium mb-2">Feature 3</h3>
+              <p className="text-gray-400 mb-2">
+                Vestibulum congue nulla nec elit egestas, nec vulputate nisi
+                gravida. Integer in ligula vel risus tristique rhoncus.
+              </p>
+              <a
+                href="#"
+                className="text-purple-500 hover:text-purple-600 font-medium"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
