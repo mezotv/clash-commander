@@ -1,3 +1,10 @@
+{
+  /* eslint-disable-next-line @next/next/no-img-element */
+}
+
+{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+
+
 import React, { FC, useEffect, useRef } from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";

@@ -1,3 +1,10 @@
+{
+  /* eslint-disable-next-line @next/next/no-img-element */
+}
+
+{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+
+
 import { useState } from "react";
 import { LazyMotion, domAnimation, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
