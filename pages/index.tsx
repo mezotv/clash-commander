@@ -8,63 +8,88 @@ export default function Home() {
         <m.div
           id="hero-content"
           className="relative w-full flex flex-col justify-center items-center h-screen min-h-[800px] text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4">
-            <div className="flex items-center">
-              <div className="w-2/5">
-                <h1 className="text-4xl lg:text-6xl text-left text-white">
-                  The ultimate Discord bot for managing your Clash of Clans
-                  clan.
-                </h1>
-                <p className="text-lg lg:text-2xl text-left text-white mt-4">
-                  Clash Commander is packed with powerful features to streamline
-                  your Clash of Clans clan management.
-                </p>
-                <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-8 rounded mt-8">
-                  Get Started
-                </button>
-                <button className="bg-violet-500 hover:bg-violet-600 text-white font-bold py-4 px-8 rounded mt-8">
-                  <AiOutlinePlusSquare className="inline-block mr-2" /> Get
-                  Started
-                </button>
+            <div className="flex flex-col lg:flex-row items-center">
+              <div className="w-full lg:w-1/2 lg:text-left mb-8 lg:mb-0">
+                <m.h1
+                  className="text-4xl lg:text-6xl text-white font-bold"
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  The ultimate Discord bot for managing your Clash of Clans clan.
+                </m.h1>
+                <m.p
+                  className="text-lg lg:text-2xl text-white mt-4"
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  Clash Commander is packed with powerful features to streamline your Clash of Clans clan management.
+                </m.p>
+                <m.div
+                  className="flex flex-row mt-6"
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-8 rounded mr-8">
+                    Get Started
+                  </button>
+                  <button className="bg-violet-500 hover:bg-violet-600 text-white font-bold py-4 px-8 rounded">
+                    <AiOutlinePlusSquare className="inline-block mr-2" /> Get Started
+                  </button>
+                </m.div>
               </div>
-              <div className="w-3/5 flex justify-end">
-                <img
+              <div className="w-full lg:w-1/2 flex justify-center mb-[2rem] lg:mb-[8rem]">
+                <m.img
                   src="/clash_commander.png"
-                  className="w-2/3 max-w-[500px] h-auto rounded-full animate-bounce"
+                  className="w-2/3 max-w-[450px] h-auto rounded-full"
                   alt="Clash Commander Avatar"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
                 />
               </div>
             </div>
+            <div className="wave-container absolute inset-x-0 bottom-0 -z-10">
+              <svg
+                className="wave"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+              >
+                <path
+                  fill="#5000ca"
+                  fillOpacity="1"
+                  d="M0,192L60,186.7C120,181,240,171,360,149.3C480,128,600,96,720,90.7C840,85,960,107,1080,117.3C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute bottom-0 left-0 w-full"
-            viewBox="0 0 1440 320"
-          >
-            <path
-              fill="#5000ca"
-              fillOpacity="1"
-              d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,208C672,203,768,149,864,154.7C960,160,1056,224,1152,208C1248,192,1344,96,1392,48L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-          <div
-            className="absolute bottom-0 w-full bg-[#5000ca]"
-            style={{
-              height: "50px",
-            }}
-          ></div>
         </m.div>
       </LazyMotion>
       <div className="secondary">
-        <div className="container mx-auto px-4 ">
-          <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8 text-center"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+          >
             Template Content
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-800 rounded-lg p-4">
+            <m.div
+              className="bg-gray-800 rounded-lg p-4"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <h3 className="text-white text-lg font-medium mb-2">Feature 1</h3>
-              <p className="text-gray-400 mb-2">
+              <p className="text-gray-400 mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                 feugiat mauris sit amet enim placerat, ac volutpat mi lacinia.
               </p>
@@ -74,10 +99,15 @@ export default function Home() {
               >
                 Learn More
               </a>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-4">
+            </m.div>
+            <m.div
+              className="bg-gray-800 rounded-lg p-4"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               <h3 className="text-white text-lg font-medium mb-2">Feature 2</h3>
-              <p className="text-gray-400 mb-2">
+              <p className="text-gray-400 mb-4">
                 Sed posuere, ipsum non gravida facilisis, mi nisi ultricies
                 lorem, in semper justo nisl non nunc.
               </p>
@@ -87,10 +117,15 @@ export default function Home() {
               >
                 Learn More
               </a>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-4">
+            </m.div>
+            <m.div
+              className="bg-gray-800 rounded-lg p-4"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               <h3 className="text-white text-lg font-medium mb-2">Feature 3</h3>
-              <p className="text-gray-400 mb-2">
+              <p className="text-gray-400 mb-4">
                 Vestibulum congue nulla nec elit egestas, nec vulputate nisi
                 gravida. Integer in ligula vel risus tristique rhoncus.
               </p>
@@ -100,7 +135,7 @@ export default function Home() {
               >
                 Learn More
               </a>
-            </div>
+            </m.div>
           </div>
         </div>
       </div>
