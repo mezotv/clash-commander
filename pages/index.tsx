@@ -21,7 +21,8 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  The ultimate Discord bot for managing your Clash of Clans clan.
+                  The ultimate Discord bot for managing your Clash of Clans
+                  clan.
                 </m.h1>
                 <m.p
                   className="text-lg lg:text-2xl text-white mt-4"
@@ -29,7 +30,8 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Clash Commander is packed with powerful features to streamline your Clash of Clans clan management.
+                  Clash Commander is packed with powerful features to streamline
+                  your Clash of Clans clan management.
                 </m.p>
                 <m.div
                   className="flex flex-row mt-6"
@@ -41,7 +43,8 @@ export default function Home() {
                     Get Started
                   </button>
                   <button className="bg-violet-500 hover:bg-violet-600 text-white font-bold py-4 px-8 rounded">
-                    <AiOutlinePlusSquare className="inline-block mr-2" /> Get Started
+                    <AiOutlinePlusSquare className="inline-block mr-2" /> Get
+                    Started
                   </button>
                 </m.div>
               </div>
@@ -74,64 +77,7 @@ export default function Home() {
       </LazyMotion>
       <div className="secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8 text-center">
-            Template Content
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <m.div
-              className="bg-gray-800 rounded-lg p-4"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h3 className="text-white text-lg font-medium mb-2">Feature 1</h3>
-              <p className="text-gray-400 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                feugiat mauris sit amet enim placerat, ac volutpat mi lacinia.
-              </p>
-              <a
-                href="#"
-                className="text-purple-500 hover:text-purple-600 font-medium"
-              >
-                Learn More
-              </a>
-            </m.div>
-            <m.div
-              className="bg-gray-800 rounded-lg p-4"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <h3 className="text-white text-lg font-medium mb-2">Feature 2</h3>
-              <p className="text-gray-400 mb-4">
-                Sed posuere, ipsum non gravida facilisis, mi nisi ultricies
-                lorem, in semper justo nisl non nunc.
-              </p>
-              <a
-                href="#"
-                className="text-purple-500 hover:text-purple-600 font-medium"
-              >
-                Learn More
-              </a>
-            </m.div>
-            <m.div
-              className="bg-gray-800 rounded-lg p-4"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <h3 className="text-white text-lg font-medium mb-2">Feature 3</h3>
-              <p className="text-gray-400 mb-4">
-                Vestibulum congue nulla nec elit egestas,
-              </p>
-              <a
-                href="#"
-                className="text-purple-500 hover:text-purple-600 font-medium"
-              >
-                Learn More
-              </a>
-            </m.div>
-          </div>
+          he
         </div>
       </div>
     </div>
