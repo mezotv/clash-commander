@@ -43,38 +43,42 @@ const Navbar: React.FC = () => {
               </button>
             </div>
             <ul className="hidden lg:flex lg:items-center space-x-6">
-              <li>
+            <motion.li
+              className="mr-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}>
                 <a
-                  href="#home"
+                  href="#hero"
                   className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Home
                 </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
-                >
-                  About
-                </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+              className="mr-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}>
                 <a
                   href="#features"
                   className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Features
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+              className="mr-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}>
                 <a
-                  href="#contact"
-                  className="font-bold text-white just- hover:text-pink-800 transition-colors duration-300"
+                  href="/commands"
+                  className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
-                  Contact
+                  Commands
                 </a>
-              </li>
+              </motion.li>
             </ul>
           </div>
           <ul
