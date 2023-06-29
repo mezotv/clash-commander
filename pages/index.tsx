@@ -45,10 +45,10 @@ export default function Home() {
                   </button>
                 </m.div>
               </div>
-              <div className="w-full lg:w-1/2 flex justify-center mb-[2rem] lg:mb-[8rem]">
+              <div className="w-full lg:w-1/2 flex justify-center">
                 <m.img
                   src="/clash_commander.png"
-                  className="w-2/3 max-w-[450px] h-auto rounded-full"
+                  className="w-2/3 max-w-[450px] h-auto rounded-full mb-8 lg:mb-0"
                   alt="Clash Commander Avatar"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -74,11 +74,7 @@ export default function Home() {
       </LazyMotion>
       <div className="secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8 text-center"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-          >
+          <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8 text-center">
             Template Content
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -126,8 +122,7 @@ export default function Home() {
             >
               <h3 className="text-white text-lg font-medium mb-2">Feature 3</h3>
               <p className="text-gray-400 mb-4">
-                Vestibulum congue nulla nec elit egestas, nec vulputate nisi
-                gravida. Integer in ligula vel risus tristique rhoncus.
+                Vestibulum congue nulla nec elit egestas,
               </p>
               <a
                 href="#"
