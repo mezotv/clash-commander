@@ -74,7 +74,6 @@ export default function Home() {
       </LazyMotion>
       <div className="secondary">
         <div className="container mx-auto px-4">
-            {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
           <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8 text-center">
             Template Content
           </h2>
