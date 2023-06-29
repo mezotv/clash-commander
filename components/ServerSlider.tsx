@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef } from "react";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { LazyMotion, domAnimation, m } from "framer-motion";
@@ -23,26 +23,34 @@ const ServerSlider: FC<ServerSliderProps> = ({ servers }) => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 2500); // Adjust the interval duration for smoother sliding
+    }, 3000); // Adjust the interval duration for smoother sliding
 
     return () => {
       clearInterval(interval);
     };
   }, []);
 
-  const settings = {
+  const settings: Settings = {
     dots: false,
     infinite: true,
     speed: 1000, // Adjust slide transition speed for smoother motion
-    slidesToShow: 3,
+    slidesToShow: 3, // Show 3 cards on desktop
     slidesToScroll: 1,
     rtl: true,
     swipeToSlide: true,
-    lazyLoad: "ondemand",
+    lazyLoad: "ondemand" as const, // Provide the correct type for lazyLoad
     arrows: false,
     draggable: false,
     autoplay: true,
-    autoplaySpeed: 2500, // Adjust the autoplay interval for smoother sliding
+    autoplaySpeed: 3000, // Adjust the autoplay interval for smoother sliding
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1, // Show only 1 card on smaller screens
+        },
+      },
+    ],
   };
 
   return (
@@ -51,22 +59,16 @@ const ServerSlider: FC<ServerSliderProps> = ({ servers }) => {
         {servers.map((server) => (
           <m.div
             key={server.id}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              height: "150px",
-              padding: "0.5rem",
-              marginBottom: "1rem",
-            }}
+            className="flex items-center justify-center w-full h-full p-2 sm:p-4"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: "0%" }}
             transition={{ duration: 0.5 }}
           >
-            <div className="bg-[#f72ae611] rounded-lg shadow-lg mx-2 mb-10 p-4 flex items-center">
+            <div className="bg-[#f72ae611] w-full sm:w-96 rounded-lg shadow-lg flex items-center p-4">
               <img
                 src={server.imageUrl}
                 alt={server.name}
-                className="w-14 h-14 rounded-full object-cover mr-3"
+                className="w-16 h-16 rounded-full object-cover mr-4"
               />
               <div>
                 <h3 className="text-lg font-semibold">{server.name}</h3>

@@ -1,11 +1,10 @@
 import Navbar from "@/components/Navbar";
 import ServerSlider from "@/components/ServerSlider";
-import Features from "@/components/Features";
 
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import Link from "next/link";
-
+import Features from "@/components/Features";
 export default function Home() {
   const servers = [
     {
@@ -46,7 +45,6 @@ export default function Home() {
     },
     // Add more server objects as needed
   ];
-
   return (
     <div id="hero" className="w-full relative overflow-hidden">
       <Navbar />
@@ -67,7 +65,8 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  The ultimate Discord bot for managing your Clash of Clans clan.
+                  A Discord bot for managing your Clash of Clans
+                  clan.
                 </m.h1>
                 <m.p
                   className="text-lg lg:text-2xl text-white mt-4"
@@ -75,7 +74,8 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Clash Commander is packed with powerful features to streamline your Clash of Clans clan management.
+                  Clash Commander is packed with powerful features to streamline
+                  your Clash of Clans clan management.
                 </m.p>
                 <m.div
                   className="lg:flex lg:flex-row mt-6 flex flex-col"
@@ -88,11 +88,13 @@ export default function Home() {
                   </button>
                   <button className="bg-white hover:bg-zinc-600 text-black font-bold py-4 px-8 rounded">
                     <AiOutlinePlusSquare className="inline-block mr-2" />{" "}
-                    <Link href={"https://discord.com/invite/replace"}>Invite Bot</Link>
+                    <Link href={"https://discord.com/invite/replace"}>
+                      Invite Bot
+                    </Link>
                   </button>
                 </m.div>
               </div>
-              <div className="w-full lg:w-1/2 flex justify-center mb-[2rem] lg:mb-[8rem]">
+              <div className="w-full lg:w-1/2 flex justify-center  mb-[2rem] lg:mb-[8rem]">
                 <m.img
                   src="/clash_commander.png"
                   className="w-2/3 max-w-[450px] h-auto rounded-full"
@@ -104,7 +106,11 @@ export default function Home() {
               </div>
             </div>
             <div className="wave-container absolute inset-x-0 bottom-0 -z-10">
-              <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
+              <svg
+                className="wave"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 260"
+              >
                 <path
                   fill="#f4e1"
                   fillOpacity="1"
@@ -120,14 +126,16 @@ export default function Home() {
           <LazyMotion features={domAnimation} strict>
             <div className="mb-4 text-center">
               <h2 className="text-2xl font-bold">Server Slider</h2>
-              <p className="text-xl font-bold">Clash Commander is in all of your favorite servers....</p>
+              <p className="text-xl font-bold">
+                Clash Commander is in all of your favorite servers....
+              </p>
             </div>
             <ServerSlider servers={servers} />
           </LazyMotion>
         </div>
       </div>
       <div className="">
-        <Features />
+      <Features/>
       </div>
     </div>
   );

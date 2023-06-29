@@ -1,12 +1,23 @@
 import { useState } from "react";
 import { LazyMotion, domAnimation, motion } from "framer-motion";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
+import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const router = useRouter();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+  };
+
+  const handleMenuItemClick = () => {
+    setIsNavOpen(false);
+  };
+
+  const handleBackgroundClick = () => {
+    setIsNavOpen(false);
+    router.push("#hero"); // Scroll to the hero section when the background is clicked
   };
 
   return (
@@ -28,34 +39,30 @@ const Navbar: React.FC = () => {
                 className="flex items-center justify-center p-2 rounded-md text-pink-600 hover:bg-pink-200 focus:outline-none"
                 onClick={toggleNav}
               >
-                <FiMenu size={24} />
+                {isNavOpen ? <FiX size={24} /> : <FiMenu size={24} />}
               </button>
             </div>
-            <ul
-              className={`${
-                isNavOpen ? "block" : "hidden"
-              } lg:flex lg:items-center w-full lg:w-auto`}
-            >
-              <li className="mr-4">
+            <ul className="hidden lg:flex lg:items-center space-x-6">
+              <li>
                 <a
                   href="#home"
-                  className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
+                  className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Home
                 </a>
               </li>
-              <li className="mr-4">
+              <li>
                 <a
                   href="#about"
-                  className="block font-bold text-white hover:text-pink-800 transition-colors duration-300"
+                  className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   About
                 </a>
               </li>
-              <li className="mr-4">
+              <li>
                 <a
                   href="#features"
-                  className="block font-bold text-white hover:text-pink-800 transition-colors duration-300"
+                  className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Features
                 </a>
@@ -63,13 +70,62 @@ const Navbar: React.FC = () => {
               <li>
                 <a
                   href="#contact"
-                  className="block font-bold text-white hover:text-pink-800 transition-colors duration-300"
+                  className="font-bold text-white just- hover:text-pink-800 transition-colors duration-300"
                 >
                   Contact
                 </a>
               </li>
             </ul>
           </div>
+          <ul
+            className={`${
+              isNavOpen ? "fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-75" : "hidden"
+            }`}
+            onClick={handleBackgroundClick}
+          >
+            <motion.li
+              className="mr-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <a
+                href="#hero"
+                className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
+                onClick={handleMenuItemClick}
+              >
+                Home
+              </a>
+            </motion.li>
+            <motion.li
+              className="mr-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <a
+                href="#features"
+                className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
+                onClick={handleMenuItemClick}
+              >
+                Features
+              </a>
+            </motion.li>
+            <motion.li
+              className="mr-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <a
+                href="/commands"
+                className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
+                onClick={handleMenuItemClick}
+              >
+                Commands
+              </a>
+            </motion.li>
+          </ul>
         </div>
       </motion.nav>
     </LazyMotion>
