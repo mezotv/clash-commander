@@ -45,10 +45,10 @@ export default function Home() {
                   </button>
                 </m.div>
               </div>
-              <div className="w-full lg:w-1/2 flex justify-center">
+              <div className="w-full lg:w-1/2 flex justify-center  mb-[2rem] lg:mb-[8rem]">
                 <m.img
                   src="/clash_commander.png"
-                  className="w-2/3 max-w-[450px] h-auto rounded-full mb-8 lg:mb-0"
+                  className="w-2/3 max-w-[450px] h-auto rounded-full"
                   alt="Clash Commander Avatar"
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -74,6 +74,7 @@ export default function Home() {
       </LazyMotion>
       <div className="secondary">
         <div className="container mx-auto px-4">
+            {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
           <h2 className="text-3xl lg:text-4xl text-white font-bold mb-8 text-center">
             Template Content
           </h2>
