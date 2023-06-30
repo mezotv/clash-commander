@@ -9,6 +9,7 @@ import { useState } from "react";
 import { LazyMotion, domAnimation, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -79,12 +80,12 @@ const Navbar: React.FC = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}>
-                <a
+                <Link
                   href="/commands"
                   className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Commands
-                </a>
+                </Link>
               </motion.li>
             </ul>
           </div>
@@ -100,13 +101,13 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <a
-                href="#hero"
+              <Link
+                href="/"
                 className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
                 onClick={handleMenuItemClick}
               >
                 Home
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               className="mr-4"
@@ -114,13 +115,13 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <a
+              <Link
                 href="#features"
                 className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
                 onClick={handleMenuItemClick}
               >
                 Features
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               className="mr-4"
@@ -128,13 +129,13 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <a
+              <Link
                 href="/commands"
                 className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
                 onClick={handleMenuItemClick}
               >
                 Commands
-              </a>
+              </Link>
             </motion.li>
           </ul>
         </div>
