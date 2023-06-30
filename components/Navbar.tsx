@@ -56,24 +56,24 @@ const Navbar: React.FC = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}>
-                <a
+                <Link
                   href="/"
                   className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Home
-                </a>
+                </Link>
               </motion.li>
               <motion.li
               className="mr-4"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}>
-                <a
+                <Link
                   href="#features"
                   className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Features
-                </a>
+                </Link>
               </motion.li>
               <motion.li
               className="mr-4"
