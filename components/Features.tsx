@@ -1,8 +1,21 @@
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { useEffect } from "react";
+import { LazyMotion, domAnimation, m, useAnimation } from "framer-motion";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
+import ClanEmbed from "./ClanEmbed";
+import PlayerEmbed from "./PlayerEmbed";
 
 const Features = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 });
+    }
+  }, [controls, inView]);
+
   return (
     <LazyMotion features={domAnimation}>
       <div id="features" className="py-16">
@@ -29,24 +42,17 @@ const Features = () => {
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-center mt-16">
             <div className="w-full lg:w-1/2 order-1">
-              <m.img
-                src="/image_2.png"
-                className="w-full max-w-md mx-auto mb-8 lg:mb-0 rounded-lg"
-                alt="Feature Image 2"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              />
+              <PlayerEmbed />
             </div>
             <div className="w-full lg:w-1/2 order-2">
-              <div className="text-left">
+              <div className="text-left lg:ml-10 mb-3">
                 <m.h3
-                  className="text-2xl font-bold text-white mb-4"
+                  className="text-2xl font-bold text-white mb-4 "
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Powerful Clan Management
+                  Access Detailed Player Statistics
                 </m.h3>
                 <m.p
                   className="text-lg text-white"
@@ -54,54 +60,71 @@ const Features = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  Clash Commander provides you with a set of powerful features to efficiently manage your Clash of Clans clan. From member management and communication tools to event organization and data analysis, we&apos;ve got you covered.
+                  The Player Command feature within the Clash Commander bot
+                  offers an invaluable resource for players seeking to access
+                  detailed statistics about their fellow clan members and
+                  opponents. By utilizing this powerful tool, users can gain
+                  valuable insights into the performance, progress, and
+                  strategies employed by individual players within the game.
                 </m.p>
               </div>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-center mt-16">
             <div className="w-full lg:w-1/2 order-2">
-              <div className="text-left">
-              <m.img
-                src="/image_3.png"
-                className="w-full max-w-md mx-auto mb-8 lg:mb-0 rounded-lg"
-                alt="Feature Image 3"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              />
+              <div className="text-left lg:ml-10 mb-3">
+                <ClanEmbed />
               </div>
             </div>
             <div className="w-full  lg:w-1/2 order-1">
-            <m.h3
-                  className="text-2xl font-bold text-white mb-4"
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
-                  Seamless Integration
-                </m.h3>
-                <m.p
-                  className="text-lg text-white"
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
-                  Clash Commander seamlessly integrates with Discord, providing you and your clan members with a smooth and efficient experience. Connect your clan server and unlock the full potential of clan management and coordination.
-                </m.p>
+              <m.h3
+                className="text-2xl font-bold text-white mb-4"
+                initial={{ opacity: 0, y: -50 }}
+                animate={controls}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                Uncover In-Depth Clan Details
+              </m.h3>
+              <m.p
+                className="text-lg text-white"
+                initial={{ opacity: 0, y: -50 }}
+                animate={controls}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                This powerful tool allows you to delve into comprehensive clan
+                statistics, including war performance, clan points, and more. By
+                harnessing these in-depth clan details, you can gain valuable
+                insights into your clan&apos;s strengths, weaknesses, and
+                overall progress.
+              </m.p>
             </div>
           </div>
           <div className="flex justify-center mt-16">
-          <Link href={'https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560'}>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full">
-              <m.span
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+            <Link
+              href={
+                "https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560"
+              }
+            >
+              <button
+                className="bg-purple-300 hover:bg-purple-500 text-white font-bold py-4 px-8 rounded-full"
+                ref={ref}
               >
-                Get Started 
-              </m.span>
-            </button>
+                <m.span
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={controls}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  <m.span
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={controls}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Get Started
+                  </m.span>
+                </m.span>
+              </button>
             </Link>
           </div>
         </div>

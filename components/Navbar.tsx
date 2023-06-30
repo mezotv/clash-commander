@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}>
                 <Link
-                  href="#features"
+                  href="/#features"
                   className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
                 >
                   Features
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               <Link
-                href="#features"
+                href="/#features"
                 className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
                 onClick={handleMenuItemClick}
               >
