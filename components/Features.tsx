@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import ClanEmbed from "./ClanEmbed";
 import PlayerEmbed from "./PlayerEmbed";
+import InviteSection from "./InviteSection";
 
 const Features = () => {
   const controls = useAnimation();
@@ -105,28 +106,10 @@ const Features = () => {
                 "https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560"
               }
             >
-              <button
-                className="bg-purple-300 hover:bg-purple-500 text-white font-bold py-4 px-8 rounded-full"
-                ref={ref}
-              >
-                <m.span
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={controls}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
-                  <m.span
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={controls}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    Get Started
-                  </m.span>
-                </m.span>
-              </button>
+             <InviteSection/>
             </Link>
           </div>
+           
         </div>
       </div>
     </LazyMotion>

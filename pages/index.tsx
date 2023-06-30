@@ -141,7 +141,6 @@ export default function Home() {
       <div className="">
       <Features/>
       </div>
-      <InviteSection/>
       <Footer/>
     </div>
   );

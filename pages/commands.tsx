@@ -22,11 +22,13 @@ const Commands = () => {
         <h1 className="text-3xl font-bold mb-4">Commands List</h1>
         <h3 className="text-xl text-gray-500 mb-8">All The Commands Would You Has To Offer!</h3>
 
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col w-full gap-4">
           {commands.map((command) => (
             <div
               key={command.name}
-              className="secondary p-6 rounded-lg shadow-md w-full md:w-auto mb-8 md:mb-0 md:mr-8"
+              className={`secondary p-6 rounded-lg shadow-md w-full md:w-auto mb-8 md:mb-0 md:mr-8 ${
+                openedCommand === command.name ? 'open' : ''
+              }`}
             >
               <div
                 className="flex justify-between items-center cursor-pointer mb-4"

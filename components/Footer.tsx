@@ -2,50 +2,79 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className=" py-8">
+    <footer className="secondary py-8">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
-            <div className="flex items-center">
-              <img src="/clash_commander.png" alt="Logo" className="w-12 h-12 mr-2 rounded-full" draggable={false} />
-              <p className="text-white text-xl font-bold">WouldYou</p>
+            <div className="flex items-center justify-center md:justify-start">
+              <img
+                src="/clash_commander.png"
+                alt="Logo"
+                className="w-12 h-12 mr-2 rounded-full"
+                draggable={false}
+              />
+              <p className="text-white text-2xl font-bold">Clash Commander</p>
             </div>
-            <p className="text-gray-300 mt-4">
-             Manage your Clash of Clans Clan with ease.
+            <p className="text-gray-300 mt-4 text-center md:text-left">
+              Manage your Clash of Clans Clan with ease.
             </p>
           </div>
-          <div className="w-full md:w-1/2 lg:w-1/4">
+          <div className="w-full md:w-1/2 lg:w-1/4  flex flex-col justify-center ">
             <h4 className="text-white font-bold mb-2">Recommended</h4>
-            <Link href="/" passHref>
-              <p className="text-gray-300 hover:text-white block mb-2">Home</p>
-            </Link>
-            <Link href="/commands" passHref>
-              <p className="text-gray-300 hover:text-white block mb-2">Commands</p>
-            </Link>
+            <ul className="text-gray-300">
+              <li>
+                <Link href="/" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white">Home</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/commands" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white">Commands</span>
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4">
             <h4 className="text-white font-bold mb-2">Legal</h4>
-            <Link href="/imprint" passHref>
-              <p className="text-gray-300 hover:text-white block mb-2">Imprint</p>
-            </Link>
-            <Link href="/privacy" passHref>
-              <p className="text-gray-300 hover:text-white block mb-2">Privacy Policy</p>
-            </Link>
-            <Link href="/terms" passHref >
-              <p className="text-gray-300 hover:text-white block mb-2">Terms of Service</p>
-            </Link>
+            <ul className="text-gray-300">
+              <li>
+                <Link href="/imprint" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white">Imprint</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white">Privacy Policy</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white">Terms of Service</span>
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4">
             <h4 className="text-white font-bold mb-2">Links</h4>
-            <Link href="/discord" passHref target="_blank">
-              <p className="text-gray-300 hover:text-white block mb-2" rel="noopener noreferrer">Support Server</p>
-            </Link>
-            <Link href="/invite" passHref target="_blank">
-              <p className="text-gray-300 hover:text-white block mb-2"  rel="noopener noreferrer">Invite</p>
-            </Link>
-            <Link href="/vote" passHref target="_blank">
-              <p className="text-gray-300 hover:text-white block mb-2"  rel="noopener noreferrer">Vote</p>
-            </Link>
+            <ul className="text-gray-300">
+              <li>
+                <Link href="/discord" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white" rel="noopener noreferrer">
+                    Support Server
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/invite" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white" rel="noopener noreferrer">Invite</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/vote" passHref>
+                  <span className="block mb-2 cursor-pointer hover:text-white" rel="noopener noreferrer">Vote</span>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -53,14 +82,14 @@ const Footer = () => {
         <div className="container mx-auto">
           <p className="text-gray-300 text-center">
             Made With ♥ By{" "}
-            <Link href="https://github.com/MarcWebDev" target="_blank" rel="noopener noreferrer">
-              Palentier
+            <Link href="https://github.com/palentier" target="_blank" rel="noopener noreferrer">
+              <span className="text-blue-400 cursor-pointer">Palentier</span>
             </Link>{" "}
             using{" "}
-            <Link href="https://github.com/mezotv" target="_blank" rel="noopener noreferrer">
-              NextJS
+            <Link href="https://nextjs.org" target="_blank" rel="noopener noreferrer">
+              <span className="text-blue-400 cursor-pointer">NextJS</span>
             </Link>{" "}
-            For clashcommander.xyz
+            for clashcommander.xyz
           </p>
         </div>
       </div>

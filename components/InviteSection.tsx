@@ -50,7 +50,7 @@ const InviteSection: React.FC = () => {
     return "th";
   };
   return (
-    <section className="secondary py-8">
+    <section className=" py-8">
       <div className="container mx-auto">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white mb-4">

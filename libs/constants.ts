@@ -2,25 +2,25 @@ export const commands = [
   {
     name: "help",
     description: "Get help and information about the bot.",
-    usage: "!help",
+    usage: "/help",
     subcommands: "None",
   },
   {
-    name: "clan",
+    name: "/clan",
     description: "Manage your clan and clan members.",
-    usage: "!clan <subcommand>",
-    subcommands: "create, join, leave",
+    usage: "/clan <subcommand>",
+    subcommands: "tag",
   },
   {
     name: "player",
     description: "Manage your player profile.",
-    usage: "!player <subcommand>",
-    subcommands: "info, stats, inventory",
+    usage: "/player <subcommand>",
+    subcommands: "tag",
   },
   {
     name: "goldpass",
     description: "Get information about the Gold Pass.",
-    usage: "!goldpass",
+    usage: "/goldpass",
     subcommands: "None",
   },
 ];
