@@ -31,20 +31,20 @@ const Footer = () => {
             <Link href="/privacy" passHref>
               <p className="text-gray-300 hover:text-white block mb-2">Privacy Policy</p>
             </Link>
-            <Link href="/terms" passHref>
+            <Link href="/terms" passHref >
               <p className="text-gray-300 hover:text-white block mb-2">Terms of Service</p>
             </Link>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4">
             <h4 className="text-white font-bold mb-2">Links</h4>
-            <Link href="/discord" passHref>
-              <p className="text-gray-300 hover:text-white block mb-2" target="_blank" rel="noopener noreferrer">Support Server</p>
+            <Link href="/discord" passHref target="_blank">
+              <p className="text-gray-300 hover:text-white block mb-2" rel="noopener noreferrer">Support Server</p>
             </Link>
-            <Link href="/invite" passHref>
-              <p className="text-gray-300 hover:text-white block mb-2" target="_blank" rel="noopener noreferrer">Invite</p>
+            <Link href="/invite" passHref target="_blank">
+              <p className="text-gray-300 hover:text-white block mb-2"  rel="noopener noreferrer">Invite</p>
             </Link>
-            <Link href="/vote" passHref>
-              <p className="text-gray-300 hover:text-white block mb-2" target="_blank" rel="noopener noreferrer">Vote</p>
+            <Link href="/vote" passHref target="_blank">
+              <p className="text-gray-300 hover:text-white block mb-2"  rel="noopener noreferrer">Vote</p>
             </Link>
           </div>
         </div>
