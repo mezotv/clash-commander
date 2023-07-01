@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { LazyMotion, domAnimation, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";

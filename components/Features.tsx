@@ -97,7 +97,7 @@ const Features = () => {
                   Uncover In-Depth Clan Details
                 </h3>
                 <p className="text-lg text-white">
-                  This powerful tool allows you to delve into comprehensive clan statistics, including war performance, clan points, and more. By harnessing these in-depth clan details, you can gain valuable insights into your clan's strengths, weaknesses, and overall progress.
+                  This powerful tool allows you to delve into comprehensive clan statistics, including war performance, clan points, and more. By harnessing these in-depth clan details, you can gain valuable insights into your clan&apos;s strengths, weaknesses, and overall progress.
                 </p>
               </m.div>
             </div>
