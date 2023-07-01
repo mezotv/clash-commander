@@ -47,8 +47,8 @@ export default function Home() {
     },
     // Add more server objects as needed
   ];
-  return (
-    <div id="hero" className="w-full relative overflow-hidden ">
+  return  (
+    <div id="hero" className="w-full relative overflow-hidden">
       <Navbar />
       <LazyMotion features={domAnimation} strict>
         <m.div
@@ -60,45 +60,42 @@ export default function Home() {
         >
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center">
-              <div className="w-full lg:w-1/2 lg:text-left mb-8 lg:mb-0">
+              <div className="w-full lg:w-1/2 lg:text-left mb-8 lg:mb-0 order-2 lg:order-1">
                 <m.h1
-                  className="text-4xl lg:text-6xl text-white font-bold"
+                  className="text-4xl lg:text-6xl text-white font-bold text-center lg:text-left"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                   Discord bot for managing your Clash of Clans
-                  clan.
+                  Discord bot for managing your Clash of Clans clan.
                 </m.h1>
                 <m.p
-                  className="text-lg lg:text-2xl text-white mt-4"
+                  className="text-lg lg:text-2xl text-white mt-4 text-center lg:text-left"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  Clash Commander is packed with powerful features to streamline
-                  your Clash of Clans clan management.
+                  Clash Commander is packed with powerful features to streamline your Clash of Clans clan management.
                 </m.p>
                 <m.div
-                  className="lg:flex lg:flex-row mt-6 flex flex-col"
+                  className="lg:flex lg:flex-row mt-6 flex flex-col items-center lg:items-start"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <Link href={"#features"}>
-                  <button className="bg-[#cda2c1] hover:bg-[#a96095] text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0">
-                    Get Started
-                  </button>
+                  <Link href="#features">
+                    <button className="bg-[#cda2c1] hover:bg-[#a96095] text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0">
+                      Get Started
+                    </button>
                   </Link>
-                    <Link href={"https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560"}>
-                  <button className="bg-white hover:bg-zinc-600 text-black font-bold py-4 px-8 rounded">
-                    <AiOutlinePlusSquare className="inline-block mr-2" />{" "}
-                      Invite Bot
-                  </button>
-                    </Link>
+                  <Link href="https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560">
+                    <button className="bg-white hover:bg-zinc-600 text-black font-bold py-4 px-8 rounded">
+                      <AiOutlinePlusSquare className="inline-block mr-2" /> Invite Bot
+                    </button>
+                  </Link>
                 </m.div>
               </div>
-              <div className="w-full lg:w-1/2 flex justify-center  mb-[2rem] lg:mb-[8rem]">
+              <div className="w-full lg:w-1/2 flex justify-center mb-[2rem] lg:mb-[8rem] order-1 lg:order-2">
                 <m.img
                   src="/clash_commander.png"
                   className="w-2/3 max-w-[450px] h-auto rounded-full"
@@ -110,11 +107,7 @@ export default function Home() {
               </div>
             </div>
             <div className="wave-container absolute inset-x-0 bottom-0 -z-10">
-              <svg
-                className="wave"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1440 260"
-              >
+              <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
                 <path
                   fill="#f4e1"
                   fillOpacity="1"
@@ -138,10 +131,10 @@ export default function Home() {
           </LazyMotion>
         </div>
       </div>
-      <div className="">
-      <Features/>
+      <div>
+        <Features />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

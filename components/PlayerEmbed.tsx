@@ -52,10 +52,10 @@ export default function PlayerEmbed() {
               <DiscordEmbedField fieldTitle="Townhall Level" inline inlineIndex={1}>
                 <DiscordCustomEmoji
                   name="level"
-                  url="/clan_level.webp"
+                  url="/th10.webp"
                   embedEmoji
                 />{" "}
-                10{" "}
+                10 | Weapon: 0{" "}
               </DiscordEmbedField>
               <DiscordEmbedField
                 fieldTitle="Level"
@@ -65,7 +65,7 @@ export default function PlayerEmbed() {
                 {" "}
                 <DiscordCustomEmoji
                   name="sapphire"
-                  url="/clan_level.webp"
+                  url="/1058110647457546250.webp"
                   embedEmoji
                 />{" "}
                 100{" "}
@@ -75,6 +75,11 @@ export default function PlayerEmbed() {
                 inline
                 inlineIndex={3}
               >
+                 <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058110650351636630.webp"
+                  embedEmoji
+                />
                 {" "}
                 N/A{" "}
               </DiscordEmbedField>
@@ -83,8 +88,13 @@ export default function PlayerEmbed() {
                 inline
                 inlineIndex={1}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058110653740626021.webp"
+                  embedEmoji
+                />
                 {" "}
-                :trophyC: 1743{" "}
+                1743{" "}
               </DiscordEmbedField>
 
               <DiscordEmbedField
@@ -92,6 +102,11 @@ export default function PlayerEmbed() {
                 inline
                 inlineIndex={2}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058110650351636630.webp"
+                  embedEmoji
+                />
                 {" "}
                 🏆 2182{" "}
               </DiscordEmbedField>
@@ -100,14 +115,24 @@ export default function PlayerEmbed() {
                 inline
                 inlineIndex={3}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1121614284259086436.webp"
+                  embedEmoji
+                />
                 {" "}
-                🏆 100{" "}
+                 100{" "}
               </DiscordEmbedField>
               <DiscordEmbedField
                 fieldTitle="Donations"
                 inline
                 inlineIndex={1}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058110664830357665.webp"
+                  embedEmoji
+                />
                 {" "}
                 0 | Recieved: 0{" "}
               </DiscordEmbedField>
@@ -116,6 +141,11 @@ export default function PlayerEmbed() {
                 inline
                 inlineIndex={2}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058061175985803334.webp"
+                  embedEmoji
+                />
                 {" "}
                 0{" "}
               </DiscordEmbedField>
@@ -124,32 +154,52 @@ export default function PlayerEmbed() {
                 inline
                 inlineIndex={3}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058110650351636630.webp"
+                  embedEmoji
+                />
                 {" "}
-                🏆 50{" "}
+                 50{" "}
               </DiscordEmbedField>
               <DiscordEmbedField
                 fieldTitle="Clancapital Contributions Wins"
                 inline
                 inlineIndex={1}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058057404778037288.webp"
+                  embedEmoji
+                />
                 {" "}
-                🏆 350{" "}
+                 350{" "}
               </DiscordEmbedField>
               <DiscordEmbedField
-                fieldTitle="Clancapital Contributions Wins"
+                fieldTitle="Builderhall Level"
                 inline
                 inlineIndex={2}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058111852166529105.webp"
+                  embedEmoji
+                />
                 {" "}
-                🏆 350{" "}
+                 6{" "}
               </DiscordEmbedField>
               <DiscordEmbedField
                 fieldTitle="Personal Builder Best"
                 inline
                 inlineIndex={3}
               >
+                <DiscordCustomEmoji
+                  name="sapphire"
+                  url="/1058110680881967158.webp"
+                  embedEmoji
+                />
                 {" "}
-                🏆 2150{" "}
+                 2150{" "}
               </DiscordEmbedField>
             </DiscordEmbedFields>
           </DiscordEmbed>
@@ -157,8 +207,8 @@ export default function PlayerEmbed() {
             <DiscordActionRow>
               <DiscordButton
                 url="https://www.clashofstats.com/clans/41.er-2J0JVPP2/summary"
-                emoji="/icons8-clash-of-clans-96.png"
-                emojiName="👀"
+                emoji="/1058110656987017246.webp"
+                emojiName="1058110656987017246"
               >
                 Visit Player Profile
               </DiscordButton>

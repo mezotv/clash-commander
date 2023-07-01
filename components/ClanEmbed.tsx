@@ -68,7 +68,7 @@ export default function ClanEmbed() {
                         >
                           <DiscordCustomEmoji
                             name="level"
-                            url="/clan_level.webp"
+                            url="/1058110647457546250.webp"
                             embedEmoji
                           />{" "}
                           16{" "}
@@ -79,28 +79,34 @@ export default function ClanEmbed() {
                           inlineIndex={2}
                         >
                           {" "}
-                          <DiscordCustomEmoji
-                            name="sapphire"
-                            url="/clan_level.webp"
-                            embedEmoji
-                          />{" "}
-                          25952{" "}
+                          
+                          🏆 25952{" "}
                         </DiscordEmbedField>
                         <DiscordEmbedField
                           fieldTitle="Clan Versus Points"
                           inline
                           inlineIndex={3}
                         >
+                          <DiscordCustomEmoji
+                            name="level"
+                            url="/1058110680881967158.webp"
+                            embedEmoji
+                          />
                           {" "}
-                          :versustrophy: 30055{" "}
+                          30055{" "}
                         </DiscordEmbedField>
                         <DiscordEmbedField
                           fieldTitle="Clan Capital Points"
                           inline
                           inlineIndex={1}
                         >
+                          <DiscordCustomEmoji
+                            name="level"
+                            url="/1058057404778037288.webp"
+                            embedEmoji
+                          />
                           {" "}
-                          :trophyC: 1576{" "}
+                           1576{" "}
                         </DiscordEmbedField>
 
                         <DiscordEmbedField
@@ -108,40 +114,65 @@ export default function ClanEmbed() {
                           inline
                           inlineIndex={2}
                         >
+                          <DiscordCustomEmoji
+                            name="level"
+                            url="/1058110680881967158.webp"
+                            embedEmoji
+                          />
                           {" "}
-                          🏆 1800{" "}
+                          1800{" "}
                         </DiscordEmbedField>
                         <DiscordEmbedField
                           fieldTitle="War Win Streak"
                           inline
                           inlineIndex={3}
                         >
+                          <DiscordCustomEmoji
+                            name="level"
+                            url="/1058061175985803334.webp"
+                            embedEmoji
+                          />
                           {" "}
                           🏆 8{" "}
                         </DiscordEmbedField>
                         <DiscordEmbedField
-                          fieldTitle="War Win Streak"
+                          fieldTitle="Clan War Win"
                           inline
                           inlineIndex={1}
                         >
+                          <DiscordCustomEmoji
+                            name="level"
+                            url="/1058062963690442762.webp"
+                            embedEmoji
+                          />
                           {" "}
-                          🏆 8{" "}
+                           245{" "}
                         </DiscordEmbedField>
                         <DiscordEmbedField
-                          fieldTitle="War Win Streak"
+                          fieldTitle="Clan War Tie"
                           inline
                           inlineIndex={2}
                         >
+                          <DiscordCustomEmoji
+                            name="level"
+                            url="/1058062965049413763.webp"
+                            embedEmoji
+                          />
                           {" "}
-                          🏆 8{" "}
+                           0{" "}
                         </DiscordEmbedField>
                         <DiscordEmbedField
-                          fieldTitle="War Win Streak"
+                          fieldTitle="War Win Lose"
                           inline
                           inlineIndex={3}
                         >
+                          <DiscordCustomEmoji
+                            name="level"
+                            url="/1058110647457546250.webp"
+                            embedEmoji
+                          />
                           {" "}
-                          🏆 8{" "}
+                           0{" "}
                         </DiscordEmbedField>
                       </DiscordEmbedFields>
                     </DiscordEmbed>
@@ -149,8 +180,8 @@ export default function ClanEmbed() {
                       <DiscordActionRow>
                         <DiscordButton
                           url="https://www.clashofstats.com/clans/41.er-2J0JVPP2/summary"
-                          emoji="/icons8-clash-of-clans-96.png"
-                          emojiName="👀"
+                          emoji="/coc.webp"
+                          emojiName="coc"
                         >
                           Link
                         </DiscordButton>
