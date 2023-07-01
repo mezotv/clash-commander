@@ -22,13 +22,21 @@ const Features = () => {
   const animationControlsClan = useAnimation();
 
   useEffect(() => {
-    if (inViewPlayer) {
-      animationControlsPlayer.start("visible");
-    }
-    if (inViewClan) {
-      animationControlsClan.start("visible");
-    }
-  }, [inViewPlayer, inViewClan]);
+    const startPlayerAnimation = async () => {
+      if (inViewPlayer) {
+        await animationControlsPlayer.start("visible");
+      }
+    };
+
+    const startClanAnimation = async () => {
+      if (inViewClan) {
+        await animationControlsClan.start("visible");
+      }
+    };
+
+    startPlayerAnimation();
+    startClanAnimation();
+  }, [inViewPlayer, inViewClan, animationControlsPlayer, animationControlsClan]);
 
   return (
     <LazyMotion features={domAnimation}>
