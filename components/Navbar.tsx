@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { LazyMotion, domAnimation, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -45,13 +44,13 @@ const Navbar: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                 <ScrollLink
-                to="hero"
-                smooth={true}
-                duration={500}
-                className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
-                onClick={handleMenuItemClick}
-              >
+                <ScrollLink
+                  to="hero"
+                  smooth={true}
+                  duration={500}
+                  className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
+                  onClick={handleMenuItemClick}
+                >
                   Home
                 </ScrollLink>
               </motion.li>
@@ -89,7 +88,9 @@ const Navbar: React.FC = () => {
         </div>
         <ul
           className={`${
-            isNavOpen ? "fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-75" : "hidden"
+            isNavOpen
+              ? "fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-75"
+              : "hidden"
           }`}
           onClick={() => {
             setIsNavOpen(false);
@@ -103,11 +104,11 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-               <ScrollLink
+              <ScrollLink
                 to="hero"
                 smooth={true}
                 duration={500}
-                className="block text-white font-bold text-2xl hover:text-pink-800 transition-colors duration-300"
+                className="block text-white font-bold text-2xl text-center hover:text-pink-800 transition-colors duration-300"
                 onClick={handleMenuItemClick}
               >
                 Home
@@ -123,7 +124,7 @@ const Navbar: React.FC = () => {
                 to="features"
                 smooth={true}
                 duration={500}
-                className="block text-white font-bold text-2xl hover:text-pink-800 transition-colors duration-300"
+                className="block text-white font-bold text-2xl text-center hover:text-pink-800 transition-colors duration-300"
                 onClick={handleMenuItemClick}
               >
                 Features
@@ -137,7 +138,7 @@ const Navbar: React.FC = () => {
             >
               <Link
                 href="/commands"
-                className="block text-white font-bold text-2xl hover:text-pink-800 transition-colors duration-300"
+                className="block text-white font-bold text-2xl text-center hover:text-pink-800 transition-colors duration-300"
                 onClick={handleMenuItemClick}
               >
                 Commands

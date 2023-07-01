@@ -1,3 +1,4 @@
+import HeadComponent from '@/components/HeadComponent'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 {
@@ -7,5 +8,11 @@ import type { AppProps } from 'next/app'
 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return(
+    <>
+    <HeadComponent/>
+    <Component {...pageProps} />
+    </>
+  )
+  
 }
