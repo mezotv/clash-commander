@@ -65,7 +65,7 @@ const Imprint: React.FC = () => {
           </div>
         </m.main>
       </LazyMotion>
-      <Footer className="mt-auto" />
+      <Footer/>
     </div>
   );
 };

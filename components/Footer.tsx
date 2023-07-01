@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="secondary py-8 ">
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-auto">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/2 lg:w-1/4 mb-6 lg:mb-0">
             <div className="flex items-center justify-center md:justify-start">
