@@ -8,11 +8,7 @@ const Commands = () => {
   const [openedCommand, setOpenedCommand] = useState<string>('');
 
   const openCommand = (commandName: string) => {
-    setOpenedCommand(commandName);
-  };
-
-  const closeCommand = () => {
-    setOpenedCommand('');
+    setOpenedCommand(openedCommand === commandName ? '' : commandName);
   };
 
   return (
@@ -29,11 +25,9 @@ const Commands = () => {
               className={`secondary p-6 rounded-lg shadow-md w-full md:w-auto mb-8 md:mb-0 md:mr-8 ${
                 openedCommand === command.name ? 'open' : ''
               }`}
+              onClick={() => openCommand(command.name)}
             >
-              <div
-                className="flex justify-between items-center cursor-pointer mb-4"
-                onClick={() => (openedCommand === command.name ? closeCommand() : openCommand(command.name))}
-              >
+              <div className="flex justify-between items-center cursor-pointer mb-4">
                 <h4 className="text-lg font-bold">{command.name}</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

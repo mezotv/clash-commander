@@ -7,6 +7,8 @@ import Link from "next/link";
 import Features from "@/components/Features";
 import InviteSection from "@/components/InviteSection";
 import Footer from "@/components/Footer";
+import { scroller } from "react-scroll";
+
 export default function Home() {
   const servers = [
     {
@@ -47,6 +49,15 @@ export default function Home() {
     },
     // Add more server objects as needed
   ];
+
+  const scrollToFeatures = () => {
+    scroller.scrollTo("features", {
+      duration: 200,
+      smooth: "easeInOutQuart",
+    });
+  };
+
+
   return  (
     <div id="hero" className="w-full relative overflow-hidden">
       <Navbar />
@@ -84,7 +95,7 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
                   <Link href="#features">
-                    <button className="bg-[#cda2c1] hover:bg-[#a96095] text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0">
+                    <button className="bg-[#cda2c1] hover:bg-[#a96095] text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0" onClick={scrollToFeatures}>
                       Get Started
                     </button>
                   </Link>
@@ -118,7 +129,7 @@ export default function Home() {
           </div>
         </m.div>
       </LazyMotion>
-      <div id="slider" className="secondary">
+      <div  className="secondary">
         <div className="container mx-auto px-4">
           <LazyMotion features={domAnimation} strict>
             <div className="mb-4 text-center">

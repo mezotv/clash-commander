@@ -66,23 +66,21 @@ const InviteSection: React.FC = () => {
   };
 
   return (
-    <>
-    <div className="py-8">
-      <div className="container mx-auto">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Be the {serverCount + 1}
-            <sup>{getOrdinalSuffix(serverCount)}</sup> person to invite Clash Commander!
-          </h2>
-          <div>
-            <a href="https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560" className="bg-purple-300 text-white px-6 py-3 rounded font-semibold shadow hover:bg-purple-500">
-              Invite Bot
-            </a>
+      <div className="py-8">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Be the {serverCount + 1}
+              <sup>{getOrdinalSuffix(serverCount)}</sup> person to invite Clash Commander!
+            </h2>
+            <Link  href="https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560">
+              <button className="bg-purple-300 text-white px-6 py-3 rounded font-semibold shadow hover:bg-purple-500">
+                Invite Bot
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-    </div>
-    </>
   );
 };
 

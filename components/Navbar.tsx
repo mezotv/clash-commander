@@ -27,8 +27,47 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <img src="/clash_commander.png" alt="Logo" className="w-8 h-8 mr-2 rounded-full" />
-              <h1 className="text-lg font-bold"><Link href="/">Clash Commander</Link></h1>
+              <img
+                src="/clash_commander.png"
+                alt="Logo"
+                className="w-8 h-8 mr-2 rounded-full"
+              />
+              <h1 className="text-lg font-bold sm:text-xl md:text-2xl text-center">
+                <Link href="/">Clash Commander</Link>
+              </h1>
+            </div>
+            <div className="hidden lg:flex lg:items-center">
+              <ul className="flex space-x-6">
+                <li>
+                  <Link
+                    href="/"
+                    className="text-white font-bold text-sm sm:text-base md:text-lg hover:text-pink-800 transition-colors duration-300"
+                    onClick={handleMenuItemClick}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="features"
+                    smooth={true}
+                    duration={100}
+                    className="text-white font-bold text-sm sm:text-base md:text-lg hover:text-pink-800 transition-colors duration-300"
+                    onClick={handleMenuItemClick}
+                  >
+                    Features
+                  </ScrollLink>
+                </li>
+                <li>
+                  <Link
+                    href="/commands"
+                    className="text-white font-bold text-sm sm:text-base md:text-lg hover:text-pink-800 transition-colors duration-300"
+                    onClick={handleMenuItemClick}
+                  >
+                    Commands
+                  </Link>
+                </li>
+              </ul>
             </div>
             <div className="lg:hidden">
               <button
@@ -38,115 +77,41 @@ const Navbar: React.FC = () => {
                 {isNavOpen ? <FiX size={24} /> : <FiMenu size={24} />}
               </button>
             </div>
-            <ul className="hidden lg:flex lg:items-center space-x-6">
-              <motion.li
-                className=""
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ScrollLink
-                  to="/"
-                  smooth={true}
-                  duration={500}
-                  className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
-                  onClick={handleMenuItemClick}
-                >
-                  Home
-                </ScrollLink>
-              </motion.li>
-              <motion.li
-                className="mr-4"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ScrollLink
-                  to="features"
-                  smooth={true}
-                  duration={500}
-                  className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
-                  onClick={handleMenuItemClick}
-                >
-                  Features
-                </ScrollLink>
-              </motion.li>
-              <motion.li
-                className="mr-4"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Link
-                  href="/commands"
-                  className="font-bold text-white hover:text-pink-800 transition-colors duration-300"
-                >
-                  Commands
-                </Link>
-              </motion.li>
-            </ul>
+            {isNavOpen && (
+              <ul className="lg:hidden">
+                <li>
+                  <Link
+                    href="/"
+                    className="block text-white font-bold text-sm sm:text-base md:text-lg hover:text-pink-800 transition-colors duration-300"
+                    onClick={handleMenuItemClick}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="features"
+                    smooth={true}
+                    duration={100}
+                    className="block text-white font-bold text-sm sm:text-base md:text-lg hover:text-pink-800 transition-colors duration-300"
+                    onClick={handleMenuItemClick}
+                  >
+                    Features
+                  </ScrollLink>
+                </li>
+                <li>
+                  <Link
+                    href="/commands"
+                    className="block text-white font-bold text-sm sm:text-base md:text-lg hover:text-pink-800 transition-colors duration-300"
+                    onClick={handleMenuItemClick}
+                  >
+                    Commands
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
-        <ul
-          className={`${
-            isNavOpen
-              ? "fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-75"
-              : "hidden"
-          }`}
-          onClick={() => {
-            setIsNavOpen(false);
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <div className="container mx-auto px-4 py-3 space-y-8 items-center">
-            <motion.li
-              className="mr-4"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ScrollLink
-                to="/"
-                smooth={true}
-                duration={500}
-                className="block text-white font-bold text-2xl text-center hover:text-pink-800 transition-colors duration-300"
-                onClick={handleMenuItemClick}
-              >
-                Home
-              </ScrollLink>
-            </motion.li>
-            <motion.li
-              className="mr-4"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ScrollLink
-                to="features"
-                smooth={true}
-                duration={500}
-                className="block text-white font-bold text-2xl text-center hover:text-pink-800 transition-colors duration-300"
-                onClick={handleMenuItemClick}
-              >
-                Features
-              </ScrollLink>
-            </motion.li>
-            <motion.li
-              className="mr-4"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Link
-                href="/commands"
-                className="block text-white font-bold text-2xl text-center hover:text-pink-800 transition-colors duration-300"
-                onClick={handleMenuItemClick}
-              >
-                Commands
-              </Link>
-            </motion.li>
-          </div>
-        </ul>
       </motion.nav>
     </LazyMotion>
   );

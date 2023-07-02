@@ -23,8 +23,6 @@ body {
   overflow-x: hidden;
   -webkit-overflow-x: hidden;
   color: white;
-  -webkit-user-drag: element;
-  user-select: none;
   scroll-behavior: smooth;
 }
 
