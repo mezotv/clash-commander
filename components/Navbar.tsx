@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { LazyMotion, domAnimation, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -27,7 +28,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img src="/clash_commander.png" alt="Logo" className="w-8 h-8 mr-2 rounded-full" />
-              <h1 className="text-lg font-bold">Clash Commander</h1>
+              <h1 className="text-lg font-bold"><Link href="/">Clash Commander</Link></h1>
             </div>
             <div className="lg:hidden">
               <button
@@ -45,7 +46,7 @@ const Navbar: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <ScrollLink
-                  to="hero"
+                  to="/"
                   smooth={true}
                   duration={500}
                   className="block text-white font-bold hover:text-pink-800 transition-colors duration-300"
@@ -105,7 +106,7 @@ const Navbar: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               <ScrollLink
-                to="hero"
+                to="/"
                 smooth={true}
                 duration={500}
                 className="block text-white font-bold text-2xl text-center hover:text-pink-800 transition-colors duration-300"
