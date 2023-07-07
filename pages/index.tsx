@@ -1,6 +1,8 @@
+// https://realtimecolors.com/?colors=dad5f6-090519-9181e4-0a061d-482dd2
+
 import Navbar from "@/components/Navbar";
 import ServerSlider from "@/components/ServerSlider";
-
+import Image from "next/image";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import Link from "next/link";
@@ -8,8 +10,9 @@ import Features from "@/components/Features";
 import InviteSection from "@/components/InviteSection";
 import Footer from "@/components/Footer";
 import { scroller } from "react-scroll";
+import dynamic from "next/dynamic";
 
-export default function Home() {
+const Home = ( ) => {
   const servers = [
     {
       id: "1",
@@ -95,25 +98,24 @@ export default function Home() {
                   transition={{ duration: 0.8, delay: 0.6 }}
                 >
                   <Link href="#features">
-                    <button className="bg-[#cda2c1] hover:bg-[#a96095] text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0" onClick={scrollToFeatures}>
+                    <button className="bg-[#9181e4]  text-white font-bold py-4 px-8 rounded mr-0 lg:mr-8 mb-4 lg:mb-0" onClick={scrollToFeatures}>
                       Get Started
                     </button>
                   </Link>
-                  <Link href="https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560">
-                    <button className="bg-white hover:bg-zinc-600 text-black font-bold py-4 px-8 rounded">
-                      <AiOutlinePlusSquare className="inline-block mr-2" /> Invite Bot
+                  <Link href="https://discord.com/oauth2/authorize?client_id=1057995097167368222&scope=bot&permissions=277025770560" target="_blank">
+                    <button className="outline outline-2 text-white font-bold py-4 px-8 rounded">
+                      <AiOutlinePlusSquare className="inline-block mr-2" /> Invite
                     </button>
                   </Link>
                 </m.div>
               </div>
               <div className="w-full lg:w-1/2 flex justify-center mb-[2rem] lg:mb-[8rem] order-1 lg:order-2">
-                <m.img
+                <Image
                   src="/clash_commander.png"
                   className="w-2/3 max-w-[450px] h-auto rounded-full"
                   alt="Clash Commander Avatar"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
+                  width={450}
+                  height={450}
                 />
               </div>
             </div>
@@ -149,3 +151,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default dynamic (() => Promise.resolve(Home), {ssr: false})
