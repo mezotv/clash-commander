@@ -35,3 +35,12 @@ body {
 .secondary{ 
   background: #f4e1;
 }
+
+.nav-icon svg {
+  cursor: pointer;
+  z-index: 1000;
+}
+.nav-icon svg {
+  cursor: pointer;
+  z-index: 1000;
+}
